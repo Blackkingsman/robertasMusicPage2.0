@@ -112,7 +112,9 @@ export default {
     playSong (songurl, songid) {
       // if nothing is playing at all
       if (this.isPlaying === false) {
-        this.audio = new Audio(songurl)
+        this.audio = new Audio();
+        this.audio.play();
+        this.audio.src = songurl;
         this.audio.play();
         this.interval = setInterval(() => {
           if (Math.ceil(this.value) === 100) {
