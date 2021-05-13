@@ -112,9 +112,8 @@ export default {
     playSong (songurl, songid) {
       // if nothing is playing at all
       if (this.isPlaying === false) {
-        this.audio = new Audio();
-        this.audio.play();
-        this.audio.src = songurl;
+        this.audio = new Audio(songurl);
+        this.audio.load();
         this.audio.play();
         this.interval = setInterval(() => {
           if (Math.ceil(this.value) === 100) {
@@ -201,7 +200,7 @@ export default {
   grid-gap: 0.2rem;
    min-width: max-content;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 3fr 3.4fr 4.5fr 2.9fr 1.1fr;
+    grid-template-rows: repeat(7, 2fr);
     grid-template-areas:
     "orange"
     "red"
