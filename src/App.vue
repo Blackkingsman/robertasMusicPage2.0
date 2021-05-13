@@ -5,35 +5,37 @@
     <!-- Sizes your content based upon application components -->
     <v-main class="v-main">
       <!-- Provides the application the proper gutter -->
-      <IntroVideo />
-      <About />
-      <section>
+      <v-conatiner fluid>
+        <IntroVideo />
+        <!-- <About /> -->
         <UnreleasedVault />
-      </section>
+      </v-conatiner>
     </v-main>
+    <v-footer app>
+    <font-awesome-icon icon="spotify"></font-awesome-icon>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import 'nuxt-fontawesome'
-import IntroVideo from './components/introvideo';
+import "nuxt-fontawesome";
+import IntroVideo from "./components/introvideo";
 import UnreleasedVault from  './components/UnreleasedVault';
-import Appbar from './components/appbar.vue';
-import About from './components/about.vue';
+import Appbar from "./components/appbar.vue";
+// import About from './components/about.vue';
 export default {
   components: {
     UnreleasedVault,
     IntroVideo,
     Appbar,
-    About
+    // About
   },
   methods: {
-    redirect (link) {
+    redirect(link) {
       window.location = link;
-    }
-  }
-}
-
+    },
+  },
+};
 </script>
 <style>
 /* @font-face {
@@ -41,12 +43,12 @@ export default {
     src: local("Winter"),
         url('~assets/fonts/WinterSong.ttf') format('truetype');
 } */
-span{
-    padding: 10px
+span {
+  padding: 10px;
 }
 .vertical-center {
   font-family: "Winter";
-  font:12;
+  font: 12;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -54,7 +56,7 @@ span{
   transform: translateY(-50%);
 }
 .fab {
-     background: radial-gradient(
+  background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
     #fdf497 5%,
@@ -68,18 +70,5 @@ span{
 }
 .v-btn:hover:before {
   opacity: 0 !important;
-}
-@media only screen and (max-width: 767px) {
- .v-footer {
-  background: orange;
-  bottom: 0px;
-  width:100vw;
-  margin-bottom:0;
-}
- }
- @font-face {
-  font-family: "WinterSong";
-  src: local("WinterSong"),
-   url('./assets/fonts/WinterSong.ttf') format("truetype");
 }
 </style>

@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <v-container class="myGrid">
       <v-card
         v-for="song in songs"
@@ -36,7 +35,6 @@
         </v-img>
       </v-card>
     </v-container>
-  </div>
 </template>
 
 <script>
@@ -55,55 +53,55 @@ export default {
           id: 1,
           title: 'Tomb Stone',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1Rvybbfj5KDks15M_NYyx_qpXLlJhmThM'
-          // cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1Rvybbfj5KDks15M_NYyx_qpXLlJhmThM',
+          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
           color: 'yellow',
           title: 'Love Me More',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC'
-          // cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         },
         {
           color: 'cyan',
           id: 3,
           title: 'Wet Dreamz',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=19v1iWSOud5tt16muoKG3fc55X8gTt_-4'
-          // cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=19v1iWSOud5tt16muoKG3fc55X8gTt_-4',
+          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
           color: 'purple',
           id: 4,
           title: 'Love',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1gRvnYa-O8gPwcq58nceBwIwDJv2Rb_uF'
-          // cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1gRvnYa-O8gPwcq58nceBwIwDJv2Rb_uF',
+          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
           color: 'red',
           id: 5,
           title: 'Pop It',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1HOS3PMzC1UF19DxF-NQFWgbtB4bwC-BQ'
-          // cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1HOS3PMzC1UF19DxF-NQFWgbtB4bwC-BQ',
+          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
           color: 'blue',
           id: 6,
           title: 'Rich Forever',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fQ-_5vto1bZPCXBN41tNFyJ2FgemHCRu'
-          // cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1fQ-_5vto1bZPCXBN41tNFyJ2FgemHCRu',
+          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         },
         {
           color: 'green',
           id: 7,
           title: 'Dance All Night',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fZsCp6F4ToSn8l4lH13kaDWWTfGG2Nw8'
-          // cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1fZsCp6F4ToSn8l4lH13kaDWWTfGG2Nw8',
+          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         }
       ]
     }
@@ -148,6 +146,7 @@ export default {
 </script>
 
 <style>
+body{ margin:0;}
 :root{
   --main-radius:5px;
   --main-padding:5;
@@ -161,14 +160,14 @@ export default {
   grid-template-areas: 
     "orange cyan red"
     "orange purple blue"
-    "yellow green green" ;
+    "yellow purple green" ;
 }
 .orange {
   grid-area: orange;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
-.indigo {
+.purple {
   grid-area: purple;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding); }
@@ -198,13 +197,18 @@ export default {
 @media only screen and (max-width:550px) {
   .myGrid{
   grid-gap: 0.2rem;
-   min-width: max-content;
-    grid-template-columns: 1fr;
+  height: 99% !important;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(7, 2fr);
     grid-template-areas:
     "orange"
+    "yellow"
+    "cyan"
+    "purple"
     "red"
     "green"
+    "blue"
+    ;
   }
 }
 
