@@ -66,58 +66,58 @@ export default {
         {
           color: 'orange',
           id: 1,
-          title: 'Tomb Stone',
+          title: 'Missing The Rage',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
+          url: 'https://drive.google.com/uc?export=download&id=1SfT9VRA1WumsQvtJTF6VOES1buGDK7Vw',
           cover_art_url: 'https://images.complex.com/complex/images/c_fill,f_auto,g_center,w_1200/fl_lossy,pg_1/xwpfpwoavrpaagyyemz2/trippie-redd'
         },
         {
           color: 'yellow',
-          title: 'Love Me More',
+          title: 'Who Needs Love',
           id: 2,
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1MyHsOj4bddkY_J6rr9vihjW_KNrMnEkG',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'cyan',
           id: 3,
-          title: 'Wet Dreamz',
+          title: 'I Kill People',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1YIFQanbXcup67c8TEy5pLV7Gr2fEKsld',
+          cover_art_url: 'https://i1.sndcdn.com/artworks-000355808694-j5t3p0-t500x500.jpg'
         },
         {
           color: 'purple',
           id: 4,
-          title: 'Love',
+          title: 'Hate Me',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1bSdDFFoKw6cHjn6IqlLURzyvT3A7cuMP',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'red',
           id: 5,
-          title: 'Pop It',
+          title: 'Weeeeee',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1UbR2EkOAevYGHRIMfmtxtnP4gThiJhzT',
+          cover_art_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Trippie_Redd_-_Pegasus.jpg/220px-Trippie_Redd_-_Pegasus.jpg'
         },
         {
           color: 'blue',
           id: 6,
-          title: 'Rich Forever',
+          title: 'Real Feel',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1cezrar-XyxDvPDkvk-kC2YsSf1V25reU',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'green',
           id: 7,
-          title: 'Dance All Night',
+          title: '6 Kiss',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1RynC07xSIl58CrVa1MPrLpjFtRMi5ks9',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         }
       ]
     }
