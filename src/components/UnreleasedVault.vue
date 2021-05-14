@@ -1,4 +1,6 @@
 <template>
+  <div >
+    <h1 >Unreleased Vault</h1>
     <v-container class="myGrid">
       <v-card
         v-for="song in songs"
@@ -35,6 +37,7 @@
         </v-img>
       </v-card>
     </v-container>
+  </div>
 </template>
 
 <script>
@@ -201,7 +204,7 @@ body{ margin:0;}
   grid-gap: 0.2rem;
   height: 99% !important;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(7, 2fr);
+    grid-template-rows: repeat(7, 13%);
     grid-template-areas:
     "orange"
     "yellow"
@@ -211,6 +214,12 @@ body{ margin:0;}
     "green"
     "blue"
     ;
+    margin-bottom: 500px;
+  }
+  .footer {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
   }
 }
 

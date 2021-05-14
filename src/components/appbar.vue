@@ -56,10 +56,10 @@ export default {
 
 <style>
   .Name{
-    font-family: "WinterSong" !important;
+    font-family: "WinterSong" ;
     font-size: 35px;
     padding: 10px;
-    color: white;
+    color: orange;
   }
  @media screen and (max-width: 500px) {
   #items { display: none; }   /* hide it elsewhere */

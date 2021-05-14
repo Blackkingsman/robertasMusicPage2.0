@@ -3,15 +3,16 @@
   <v-app>
     <Appbar />
     <!-- Sizes your content based upon application components -->
-    <v-main class="v-main">
+    <v-main class="main">
       <!-- Provides the application the proper gutter -->
       <v-conatiner fluid>
         <IntroVideo />
         <!-- <About /> -->
         <UnreleasedVault />
+        
       </v-conatiner>
     </v-main>
-    <v-footer class="footer" >
+    <v-footer class="footer">
      <font-awesome-icon :icon="['fab', 'spotify']" class=" fa-4x " />
     </v-footer>
   </v-app>
@@ -38,6 +39,7 @@ export default {
 };
 </script>
 <style>
+ 
  @font-face {
   font-family: "WinterSong";
   src: local("WinterSong"),
@@ -45,6 +47,9 @@ export default {
 }
 span {
   padding: 10px;
+}
+.main{
+  background-color: black;
 }
 .vertical-center {
   font-family: "Winter";
@@ -68,12 +73,7 @@ span {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.v-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;            /* Footer height */
-}
+
 .v-btn:hover:before {
   opacity: 0 !important;
 }
