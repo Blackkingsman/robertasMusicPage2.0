@@ -11,8 +11,8 @@
         <UnreleasedVault />
       </v-conatiner>
     </v-main>
-    <v-footer app>
-    <font-awesome-icon icon="spotify"></font-awesome-icon>
+    <v-footer class="footer" >
+     <font-awesome-icon :icon="['fab', 'spotify']" class=" fa-4x " />
     </v-footer>
   </v-app>
 </template>
@@ -38,11 +38,11 @@ export default {
 };
 </script>
 <style>
-/* @font-face {
-    font-family: 'Winter';
-    src: local("Winter"),
-        url('~assets/fonts/WinterSong.ttf') format('truetype');
-} */
+ @font-face {
+  font-family: "WinterSong";
+  src: local("WinterSong"),
+   url(./assets/fonts/WinterSong.ttf);
+}
 span {
   padding: 10px;
 }
@@ -67,6 +67,12 @@ span {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.v-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
 }
 .v-btn:hover:before {
   opacity: 0 !important;
