@@ -56,7 +56,7 @@ export default {
           id: 1,
           title: 'Tomb Stone',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://soundcloud.com/terry-phillips-2851244/kendrick-lamar-love-ft-zacari',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
