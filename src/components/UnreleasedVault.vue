@@ -56,7 +56,7 @@ export default {
           id: 1,
           title: 'Tomb Stone',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1Rvybbfj5KDks15M_NYyx_qpXLlJhmThM',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -71,7 +71,7 @@ export default {
           id: 3,
           title: 'Wet Dreamz',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=19v1iWSOud5tt16muoKG3fc55X8gTt_-4',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -79,7 +79,7 @@ export default {
           id: 4,
           title: 'Love',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1gRvnYa-O8gPwcq58nceBwIwDJv2Rb_uF',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -87,7 +87,7 @@ export default {
           id: 5,
           title: 'Pop It',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1HOS3PMzC1UF19DxF-NQFWgbtB4bwC-BQ',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -95,7 +95,7 @@ export default {
           id: 6,
           title: 'Rich Forever',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fQ-_5vto1bZPCXBN41tNFyJ2FgemHCRu',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         },
         {
@@ -103,7 +103,7 @@ export default {
           id: 7,
           title: 'Dance All Night',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fZsCp6F4ToSn8l4lH13kaDWWTfGG2Nw8',
+          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         }
       ]
