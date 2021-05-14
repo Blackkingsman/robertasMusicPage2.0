@@ -220,6 +220,7 @@ body{ margin:0;}
         position: absolute;
         bottom: 0;
         height: 300px;
+        width: 100%;
   }
 }
 
