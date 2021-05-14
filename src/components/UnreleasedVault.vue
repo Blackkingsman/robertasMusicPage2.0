@@ -14,6 +14,18 @@
         @click="!isPlaying ? playSong(song.url,song.id) : pause(song.url,song.id)"
       >
         <v-img class="card-img" :src="song.cover_art_url" width="inherit" height="inherit">
+           <h1 v-if="!isPlaying && song.id !== setSong" style="margin: 0;
+                   position: absolute;
+                   text-align:center;
+                   width: 100%
+                   progress-circular-rotate-animation: progress-circular-rotate 0.5 linear infinite !default;
+                   bottom: 0px;">{{song.title}}</h1>
+            <h1 v-if="isPlaying && song.id !== setSong" style="margin: 0;
+                   position: absolute;
+                   text-align:center;
+                   width: 100%
+                   progress-circular-rotate-animation: progress-circular-rotate 0.5 linear infinite !default;
+                   bottom: 0px;">{{song.title}}</h1>
           <div v-if="song.id === setSong" :class="song.id">
             <v-progress-circular
               v-if="isPlaying"
@@ -57,11 +69,12 @@ export default {
           title: 'Tomb Stone',
           album: '',
           url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          cover_art_url: 'https://images.complex.com/complex/images/c_fill,f_auto,g_center,w_1200/fl_lossy,pg_1/xwpfpwoavrpaagyyemz2/trippie-redd'
         },
         {
           color: 'yellow',
           title: 'Love Me More',
+          id: 2,
           album: '',
           url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
@@ -118,6 +131,7 @@ export default {
         this.audio.type ="audio/mpeg"
         this.audio.load();
         this.audio.play();
+        this.setSong = songid;
         this.interval = setInterval(() => {
           if (Math.ceil(this.value) === 100) {
             this.pause(songurl, songid);
@@ -135,6 +149,7 @@ export default {
       if (this.setSong === songid) {
         this.audio.pause();
         this.isPlaying = false;
+        this.setSong = undefined;
         clearInterval(this.interval);
         this.value = 0;
       } else {
@@ -151,6 +166,9 @@ export default {
 </script>
 
 <style>
+h1{
+  color: red;
+}
 body{ margin:0;}
 :root{
   --main-radius:5px;
