@@ -56,14 +56,14 @@ export default {
           id: 1,
           title: 'Tomb Stone',
           album: '',
-          url: 'https://soundcloud.com/terry-phillips-2851244/kendrick-lamar-love-ft-zacari',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
           color: 'yellow',
           title: 'Love Me More',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         },
         {
@@ -71,7 +71,7 @@ export default {
           id: 3,
           title: 'Wet Dreamz',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -79,7 +79,7 @@ export default {
           id: 4,
           title: 'Love',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -87,7 +87,7 @@ export default {
           id: 5,
           title: 'Pop It',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
         },
         {
@@ -95,7 +95,7 @@ export default {
           id: 6,
           title: 'Rich Forever',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         },
         {
@@ -103,7 +103,7 @@ export default {
           id: 7,
           title: 'Dance All Night',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
+          url: 'https://drive.google.com/uc?export=download&id=1EC1EQsCMqV50hvENS4ey0EghHmqP6Za-',
           cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
         }
       ]
