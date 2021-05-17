@@ -3,16 +3,17 @@
   <v-app id="topNode" v-on:click="select($event)">
     <Appbar />
     <!-- Sizes your content based upon application components -->
-    <v-main class="v-main">
+    <v-main class="main">
       <!-- Provides the application the proper gutter -->
       <v-conatiner fluid>
         <IntroVideo />
         <!-- <About /> -->
         <UnreleasedVault />
+        
       </v-conatiner>
     </v-main>
-    <v-footer app>
-    <font-awesome-icon icon="spotify"></font-awesome-icon>
+    <v-footer class="footer">
+     <font-awesome-icon :icon="['fab', 'spotify']" class=" fa-4x " />
     </v-footer>
   </v-app>
 </template>
@@ -32,6 +33,8 @@ export default {
   },
   methods: {
     select: function (event){
+      const targetId = event.currentTarget.id;
+            console.log(targetId); // 
       const videoElement = document.getElementById('home_video');
             if (videoElement.playing) {
                 // video is already playing so do nothing
@@ -49,13 +52,17 @@ export default {
 };
 </script>
 <style>
-@font-face {
+ 
+ @font-face {
   font-family: "WinterSong";
   src: local("WinterSong"),
-   url(./assets/fonts/WinterSong.ttf) format("truetype");
+   url(./assets/fonts/WinterSong.ttf);
 }
 span {
   padding: 10px;
+}
+.main{
+  background-color: black;
 }
 .vertical-center {
   font-family: "Winter";
@@ -79,6 +86,7 @@ span {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .v-btn:hover:before {
   opacity: 0 !important;
 }

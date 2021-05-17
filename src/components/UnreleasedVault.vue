@@ -1,4 +1,6 @@
 <template>
+  <div >
+    <h1 >Unreleased Vault</h1>
     <v-container class="myGrid">
       <v-card
         v-for="song in songs"
@@ -12,6 +14,18 @@
         @click="!isPlaying ? playSong(song.url,song.id) : pause(song.url,song.id)"
       >
         <v-img class="card-img" :src="song.cover_art_url" width="inherit" height="inherit">
+           <h1 v-if="!isPlaying && song.id !== setSong" style="margin: 0;
+                   position: absolute;
+                   text-align:center;
+                   width: 100%
+                   progress-circular-rotate-animation: progress-circular-rotate 0.5 linear infinite !default;
+                   bottom: 0px;">{{song.title}}</h1>
+            <h1 v-if="isPlaying && song.id !== setSong" style="margin: 0;
+                   position: absolute;
+                   text-align:center;
+                   width: 100%
+                   progress-circular-rotate-animation: progress-circular-rotate 0.5 linear infinite !default;
+                   bottom: 0px;">{{song.title}}</h1>
           <div v-if="song.id === setSong" :class="song.id">
             <v-progress-circular
               v-if="isPlaying"
@@ -35,6 +49,7 @@
         </v-img>
       </v-card>
     </v-container>
+  </div>
 </template>
 
 <script>
@@ -51,57 +66,58 @@ export default {
         {
           color: 'orange',
           id: 1,
-          title: 'Tomb Stone',
+          title: 'Missing The Rage',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1Rvybbfj5KDks15M_NYyx_qpXLlJhmThM',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1SfT9VRA1WumsQvtJTF6VOES1buGDK7Vw',
+          cover_art_url: 'https://images.complex.com/complex/images/c_fill,f_auto,g_center,w_1200/fl_lossy,pg_1/xwpfpwoavrpaagyyemz2/trippie-redd'
         },
         {
           color: 'yellow',
-          title: 'Love Me More',
+          title: 'Who Needs Love',
+          id: 2,
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1PpzXwxf4ibqC-glQovXsP7qI7z5woQiC',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1MyHsOj4bddkY_J6rr9vihjW_KNrMnEkG',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'cyan',
           id: 3,
-          title: 'Wet Dreamz',
+          title: 'I Kill People',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=19v1iWSOud5tt16muoKG3fc55X8gTt_-4',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1YIFQanbXcup67c8TEy5pLV7Gr2fEKsld',
+          cover_art_url: 'https://i1.sndcdn.com/artworks-000355808694-j5t3p0-t500x500.jpg'
         },
         {
           color: 'purple',
           id: 4,
-          title: 'Love',
+          title: 'Hate Me',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1gRvnYa-O8gPwcq58nceBwIwDJv2Rb_uF',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1bSdDFFoKw6cHjn6IqlLURzyvT3A7cuMP',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'red',
           id: 5,
-          title: 'Pop It',
+          title: 'Weeeeee',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1HOS3PMzC1UF19DxF-NQFWgbtB4bwC-BQ',
-          cover_art_url: 'https://i.pinimg.com/originals/d3/b8/6c/d3b86cac17b13f95a31cf2c23de4ed38.jpg'
+          url: 'https://drive.google.com/uc?export=download&id=1UbR2EkOAevYGHRIMfmtxtnP4gThiJhzT',
+          cover_art_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Trippie_Redd_-_Pegasus.jpg/220px-Trippie_Redd_-_Pegasus.jpg'
         },
         {
           color: 'blue',
           id: 6,
-          title: 'Rich Forever',
+          title: 'Real Feel',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fQ-_5vto1bZPCXBN41tNFyJ2FgemHCRu',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1cezrar-XyxDvPDkvk-kC2YsSf1V25reU',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         },
         {
           color: 'green',
           id: 7,
-          title: 'Dance All Night',
+          title: '6 Kiss',
           album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1fZsCp6F4ToSn8l4lH13kaDWWTfGG2Nw8',
-          cover_art_url: 'https://i.scdn.co/image/523aeca7d02ba33ec03dd8837130b83e9c51a130'
+          url: 'https://drive.google.com/uc?export=download&id=1RynC07xSIl58CrVa1MPrLpjFtRMi5ks9',
+          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
         }
       ]
     }
@@ -115,6 +131,7 @@ export default {
         this.audio.type ="audio/mpeg"
         this.audio.load();
         this.audio.play();
+        this.setSong = songid;
         this.interval = setInterval(() => {
           if (Math.ceil(this.value) === 100) {
             this.pause(songurl, songid);
@@ -132,6 +149,7 @@ export default {
       if (this.setSong === songid) {
         this.audio.pause();
         this.isPlaying = false;
+        this.setSong = undefined;
         clearInterval(this.interval);
         this.value = 0;
       } else {
@@ -148,6 +166,9 @@ export default {
 </script>
 
 <style>
+h1{
+  color: red;
+}
 body{ margin:0;}
 :root{
   --main-radius:5px;
@@ -201,7 +222,7 @@ body{ margin:0;}
   grid-gap: 0.2rem;
   height: 99% !important;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(7, 2fr);
+    grid-template-rows: repeat(7, 13%);
     grid-template-areas:
     "orange"
     "yellow"
@@ -211,6 +232,13 @@ body{ margin:0;}
     "green"
     "blue"
     ;
+    margin-bottom: 500px;
+  }
+  .footer {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
+        width: 100%;
   }
 }
 
