@@ -1,6 +1,7 @@
 <template>
   <div>
     <video
+    id="home_video"
       width="100%"
       height="auto"
       muted

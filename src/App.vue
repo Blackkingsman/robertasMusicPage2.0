@@ -1,6 +1,6 @@
 <template>
   <!-- App.vue -->
-  <v-app>
+  <v-app id="topNode" v-on:click="select($event)">
     <Appbar />
     <!-- Sizes your content based upon application components -->
     <v-main class="v-main">
@@ -31,6 +31,17 @@ export default {
     // About
   },
   methods: {
+    select: function (event){
+      const videoElement = document.getElementById('home_video');
+            if (videoElement.playing) {
+                // video is already playing so do nothing
+            }
+            else {
+                // video is not playing
+                // so play video now
+                videoElement.play();
+            }
+    },
     redirect(link) {
       window.location = link;
     },
@@ -38,11 +49,11 @@ export default {
 };
 </script>
 <style>
-/* @font-face {
-    font-family: 'Winter';
-    src: local("Winter"),
-        url('~assets/fonts/WinterSong.ttf') format('truetype');
-} */
+@font-face {
+  font-family: "WinterSong";
+  src: local("WinterSong"),
+   url(./assets/fonts/WinterSong.ttf) format("truetype");
+}
 span {
   padding: 10px;
 }
