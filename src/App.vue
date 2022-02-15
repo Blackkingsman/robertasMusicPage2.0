@@ -7,14 +7,15 @@
       <!-- Provides the application the proper gutter -->
       <v-conatiner fluid>
         <IntroVideo />
-        <!-- <About /> -->
+        <About />
         <UnreleasedVault />
+        <Blog/>
+        <Instagram />
+        <Merch/>
         
       </v-conatiner>
     </v-main>
-    <v-footer class="footer">
-     <font-awesome-icon :icon="['fab', 'spotify']" class=" fa-4x " />
-    </v-footer>
+    <Footer/>
   </v-app>
 </template>
 
@@ -23,13 +24,21 @@ import "nuxt-fontawesome";
 import IntroVideo from "./components/introvideo";
 import UnreleasedVault from  './components/UnreleasedVault';
 import Appbar from "./components/appbar.vue";
-// import About from './components/about.vue';
+import About from './components/about.vue';
+import Blog from './components/blog.vue'
+import Instagram from './components/instagram.vue'
+import Merch from './components/merch.vue'
+import Footer from './components/footer.vue'
 export default {
   components: {
     UnreleasedVault,
     IntroVideo,
     Appbar,
-    // About
+    About,
+    Blog,
+    Instagram,
+    Merch,
+    Footer,
   },
   methods: {
     select: function (event){
@@ -45,9 +54,6 @@ export default {
                 videoElement.play();
             }
     },
-    redirect(link) {
-      window.location = link;
-    },
   },
 };
 </script>
@@ -62,7 +68,7 @@ span {
   padding: 10px;
 }
 .main{
-  background-color: black;
+  background-color: white;
 }
 .vertical-center {
   font-family: "Winter";

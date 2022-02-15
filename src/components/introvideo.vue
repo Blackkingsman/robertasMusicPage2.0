@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="video">
     <video
     id="home_video"
       width="100%"
@@ -17,6 +17,8 @@
 <script>
 export default {}
 </script>
-
 <style>
+.video{
+  background-color: rgb(249,221,194);
+}
 </style>

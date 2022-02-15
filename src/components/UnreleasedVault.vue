@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div style="background-color:rgb(118,46,93)">
     <h1 >Unreleased Vault</h1>
     <v-container class="myGrid">
       <v-card
@@ -14,13 +14,13 @@
         @click="!isPlaying ? playSong(song.url,song.id) : pause(song.url,song.id)"
       >
         <v-img class="card-img" :src="song.cover_art_url" width="inherit" height="inherit">
-           <h1 v-if="!isPlaying && song.id !== setSong" style="margin: 0;
+           <h1 class="song_title" v-if="!isPlaying && song.id !== setSong" style="margin: 0;
                    position: absolute;
                    text-align:center;
                    width: 100%
                    progress-circular-rotate-animation: progress-circular-rotate 0.5 linear infinite !default;
                    bottom: 0px;">{{song.title}}</h1>
-            <h1 v-if="isPlaying && song.id !== setSong" style="margin: 0;
+            <h1 class="song_title" v-if="isPlaying && song.id !== setSong" style="margin: 0;
                    position: absolute;
                    text-align:center;
                    width: 100%
@@ -166,8 +166,9 @@ export default {
 </script>
 
 <style>
-h1{
-  color: red;
+.song_title{
+  color: whitesmoke;
+  font-family: 'Arial';
 }
 body{ margin:0;}
 :root{
@@ -177,6 +178,7 @@ body{ margin:0;}
 .myGrid {
   display: grid;
   height: 100vh;
+  margin-bottom: 0 !important;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: repeat(3, 33%);
   grid-gap: 0.3rem;
