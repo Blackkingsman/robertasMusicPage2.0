@@ -19,19 +19,21 @@ import $ from "jquery";
 export default {
   data() {
     return {
-      hidden: false,
+      count: 0
     };
   },
   methods: {
     checkLowPower() { 
        $('body').on('click touchstart', function () {
-            const videoElement = document.getElementById('home_video');
-            if (!videoElement.playing) {
+            const videoElement = document.getElementById('home_video')
+            if (!videoElement.paused) {
                 console.log("VIDEDO")
+
             }
             else {
                 // video is not playing
                 // so play video now
+                console.log('play')
                 videoElement.play()
             }
     });
