@@ -6,8 +6,8 @@
       height="auto"
       muted
       loop
-      autoplay
       playsinline
+      autoplay
       src="../assets/video/theWay.mp4"
       type="video/mp4"
     ></video>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import $ from "jquery";
+// import $ from "jquery";
 export default {
   data() {
     return {
@@ -24,19 +24,37 @@ export default {
   },
   methods: {
     checkLowPower() { 
-       $('body').on('click touchstart', function () {
-            const videoElement = document.getElementById('home_video')
-            if (!videoElement.paused) {
-                console.log("VIDEDO")
+      document.body.addEventListener("click", playVideOnLowPower);
+      document.body.addEventListener("touchstart", playVideOnLowPower)
+      function playVideOnLowPower (){
+        try {
+          const videoElement = document.getElementById("home_video")
+          if (!videoElement.paused){
+            //video is playing
+            console.log("Video is Playing")
+          }else{
+            //video is not Playing
+            console.log("video is not Playing")
+            videoElement.play()
+          }
 
-            }
-            else {
-                // video is not playing
-                // so play video now
-                console.log('play')
-                videoElement.play()
-            }
-    });
+        }catch(error){
+          console.log(`Error Playing Video: ${error}`)
+        }
+      }
+    //    $('body').on('click touchstart', function () {
+    //         const videoElement = document.getElementById('home_video')
+    //         if (!videoElement.paused) {
+    //             console.log("VIDEDO")
+
+    //         }
+    //         else {
+    //             // video is not playing
+    //             // so play video now
+    //             console.log('play')
+    //             videoElement.play()
+    //         }
+    // });
     },
   },
   mounted() {
