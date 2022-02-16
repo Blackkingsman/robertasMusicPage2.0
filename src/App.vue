@@ -5,7 +5,7 @@
     <!-- Sizes your content based upon application components -->
     <v-main class="main">
       <!-- Provides the application the proper gutter -->
-      <v-conatiner fluid>
+      <div fluid>
         <IntroVideo />
         <About />
         <UnreleasedVault />
@@ -13,7 +13,7 @@
         <Instagram />
         <Merch/>
         
-      </v-conatiner>
+      </div>
     </v-main>
     <Footer/>
   </v-app>

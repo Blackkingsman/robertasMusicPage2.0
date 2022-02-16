@@ -6,8 +6,8 @@
       height="auto"
       muted
       loop
-      playsinline
       autoplay
+      inline
       src="../assets/video/theWay.mp4"
       type="video/mp4"
     ></video>
