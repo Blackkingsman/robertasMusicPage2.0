@@ -1,7 +1,7 @@
 <template>
   <div class="video">
     <video
-      v-if="!suspended"
+      v-if="suspended === false"
       id="home_video"
       width="100%"
       height="auto"
@@ -34,15 +34,17 @@ export default {
       const videoElement = document.getElementById("home_video");
 
       videoElement.addEventListener("suspend", () => {
+        console.log("suspend event detected")
         this.suspended = true;
       });
 
       videoElement.addEventListener("play", () => {
+        console.lgo("no suspend event detected")
         this.suspended = false;
       });
     },
   },
-  mounted() {
+  beforeMount() {
     this.checkLowPower();
   },
 };
