@@ -34,11 +34,11 @@ export default {
       const videoElement = document.getElementById("home_video");
 
       videoElement.addEventListener("suspend", () => {
-        this.suspended = false;
+        this.suspended = true;
       });
 
       videoElement.addEventListener("play", () => {
-        this.suspended = true;
+        this.suspended = false;
       });
     },
   },
