@@ -1,6 +1,7 @@
 <template>
   <div class="video">
     <video
+      v-if="!suspended"
       id="home_video"
       width="100%"
       height="auto"
@@ -11,6 +12,12 @@
       src="../assets/video/theWay.mp4"
       type="video/mp4"
     ></video>
+    <v-img
+      v-else
+      width="100%"
+      height="auto"
+      src="../assets/images/TrippieBackground.jpg"
+    ></v-img>
   </div>
 </template>
 
@@ -19,45 +26,23 @@
 export default {
   data() {
     return {
-      count: 0
+      suspended: false,
     };
   },
   methods: {
-    checkLowPower() { 
-      document.body.addEventListener("click", playVideOnLowPower);
-      document.body.addEventListener("touchstart", playVideOnLowPower)
-      function playVideOnLowPower (){
-        try {
-          const videoElement = document.getElementById("home_video")
-          if (!videoElement.paused){
-            //video is playing
-            console.log("Video is Playing")
-          }else{
-            //video is not Playing
-            console.log("video is not Playing")
-            videoElement.play()
-          }
+    checkLowPower() {
+      const videoElement = document.getElementById("home_video");
 
-        }catch(error){
-          console.log(`Error Playing Video: ${error}`)
-        }
-      }
-    //    $('body').on('click touchstart', function () {
-    //         const videoElement = document.getElementById('home_video')
-    //         if (!videoElement.paused) {
-    //             console.log("VIDEDO")
+      videoElement.addEventListener("suspend", () => {
+        this.suspended = false;
+      });
 
-    //         }
-    //         else {
-    //             // video is not playing
-    //             // so play video now
-    //             console.log('play')
-    //             videoElement.play()
-    //         }
-    // });
+      videoElement.addEventListener("play", () => {
+        this.suspended = true;
+      });
     },
   },
-  mounted() {
+  beforeMount() {
     this.checkLowPower();
   },
 };
