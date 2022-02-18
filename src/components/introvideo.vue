@@ -5,10 +5,10 @@
       id="home_video"
       width="100%"
       height="auto"
+      playsinline
+      autoplay
       muted
       loop
-      autoplay
-      inline
       src="../assets/video/theWay.mp4"
       type="video/mp4"
     ></video>
@@ -27,6 +27,8 @@ export default {
   data() {
     return {
       suspended: false,
+      videoElement: document.getElementById("home_video"),
+
     };
   },
   methods: {
@@ -34,20 +36,31 @@ export default {
       const videoElement = document.getElementById("home_video");
 
       videoElement.addEventListener("suspend", () => {
-        console.log("suspend event detected")
+        console.log("suspend event detected");
         this.suspended = true;
       });
+      videoElement.addEventListener("pause",() => {
+        console.log("pause event detected");
+        this.suspended = true;
+      }); 
 
       videoElement.addEventListener("play", () => {
-        console.lgo("no suspend event detected")
+        console.log("play event detected");
         this.suspended = false;
       });
     },
+    destroyedEvent(){
+
+    }
   },
-  beforeMount() {
+
+  created() {
     this.checkLowPower();
   },
-};
+  destroyed(){
+    this.destroyedEvent();
+  }
+}
 </script>
 <style>
 .video {
