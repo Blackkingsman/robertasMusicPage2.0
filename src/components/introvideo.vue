@@ -34,7 +34,7 @@ export default {
   methods: {
     checkLowPower() {
       const videoElement = document.getElementById("home_video");
-
+      console.log("CHECK POWER")
       videoElement.addEventListener("suspend", () => {
         console.log("suspend event detected");
         this.suspended = true;
