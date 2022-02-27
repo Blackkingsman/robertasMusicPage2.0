@@ -32,33 +32,33 @@ export default {
     };
   },
   methods: {
-    checkLowPower() {
-      const videoElement = document.getElementById("home_video");
-      console.log("CHECK POWER")
-      videoElement.addEventListener("suspend", () => {
-        console.log("suspend event detected");
-        this.suspended = true;
-      });
-      videoElement.addEventListener("pause",() => {
-        console.log("pause event detected");
-        this.suspended = true;
-      }); 
+  //   checkLowPower() {
+  //     const videoElement = document.getElementById("home_video");
+  //     console.log("CHECK POWER")
+  //     videoElement.addEventListener("suspend", () => {
+  //       console.log("suspend event detected");
+  //       this.suspended = true;
+  //     });
+  //     videoElement.addEventListener("pause",() => {
+  //       console.log("pause event detected");
+  //       this.suspended = true;
+  //     }); 
 
-      videoElement.addEventListener("play", () => {
-        console.log("play event detected");
-        this.suspended = false;
-      });
-    },
-    destroyedEvent(){
+  //     videoElement.addEventListener("play", () => {
+  //       console.log("play event detected");
+  //       this.suspended = false;
+  //     });
+  //   },
+  //   destroyedEvent(){
 
-    }
-  },
+  //   }
+  // },
 
-  created() {
-    this.checkLowPower();
-  },
-  destroyed(){
-    this.destroyedEvent();
+  // created() {
+  //   this.checkLowPower();
+  // },
+  // destroyed(){
+  //   this.destroyedEvent();
   }
 }
 </script>
