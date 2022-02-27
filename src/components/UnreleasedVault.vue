@@ -187,37 +187,69 @@ body{ margin:0;}
     "orange purple blue"
     "yellow purple green" ;
 }
+
 .orange {
   grid-area: orange;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  
+}
+.orange:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
 }
 .purple {
   grid-area: purple;
   border-radius: var(--main-radius);
-  padding-top: var(--main-padding); }
+  padding-top: var(--main-padding); 
+  }
+  .purple:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
+}
 .red{
   grid-area: red;
    border-radius: var(--main-radius);
-  padding-top: var(--main-padding);}
+  padding-top: var(--main-padding);
+  
+  }
+  .red:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
+}
 .green {
   grid-area: green;
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);}
+.green:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
+}
 .blue {
   grid-area: blue;
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);}
-
+.blue:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
+}
 .yellow {
   grid-area: yellow;
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
+.yellow:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
+}
 .cyan{
   grid-area: cyan;
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+}
+.cyan:hover{
+  transform:  translatex(-1px) translateY(-4px);
+  transition: transform 500ms ease;
 }
 @media only screen and (max-width:550px) {
   .myGrid{
