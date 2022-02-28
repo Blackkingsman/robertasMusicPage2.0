@@ -151,7 +151,7 @@ body{ margin:0;}
   
 }
 .orange:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(-2px) translateY(-4px);
   transition: transform 500ms ease;
 }
 .purple {
@@ -160,7 +160,7 @@ body{ margin:0;}
   padding-top: var(--main-padding); 
   }
   .purple:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(0px) translateY(4px);
   transition: transform 500ms ease;
 }
 .red{
@@ -170,7 +170,7 @@ body{ margin:0;}
   
   }
   .red:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(2px) translateY(-4px);
   transition: transform 500ms ease;
 }
 .green {
@@ -178,7 +178,7 @@ body{ margin:0;}
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);}
 .green:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(2px) translateY(4px);
   transition: transform 500ms ease;
 }
 .blue {
@@ -186,7 +186,7 @@ body{ margin:0;}
    border-radius: var(--main-radius);
   padding-top: var(--main-padding);}
 .blue:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(4px) translateY(0px);
   transition: transform 500ms ease;
 }
 .yellow {
@@ -195,7 +195,7 @@ body{ margin:0;}
   padding-top: var(--main-padding);
 }
 .yellow:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(-2px) translateY(4px);
   transition: transform 500ms ease;
 }
 .cyan{
@@ -204,7 +204,7 @@ body{ margin:0;}
   padding-top: var(--main-padding);
 }
 .cyan:hover{
-  transform:  translatex(-1px) translateY(-4px);
+  transform:  translatex(0px) translateY(-5px);
   transition: transform 500ms ease;
 }
 @media only screen and (max-width:550px) {

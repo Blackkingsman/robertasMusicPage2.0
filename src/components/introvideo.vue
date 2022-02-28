@@ -6,7 +6,6 @@
       width="100%"
       height="auto"
       playsinline
-      autoplay
       muted
       loop
       src="../assets/video/theWay.mp4"
@@ -22,7 +21,7 @@
 </template>
 
 <script>
-// import $ from "jquery";
+import $ from "jquery";
 export default {
   data() {
     return {
@@ -32,33 +31,27 @@ export default {
     };
   },
   methods: {
-  //   checkLowPower() {
-  //     const videoElement = document.getElementById("home_video");
-  //     console.log("CHECK POWER")
-  //     videoElement.addEventListener("suspend", () => {
-  //       console.log("suspend event detected");
-  //       this.suspended = true;
-  //     });
-  //     videoElement.addEventListener("pause",() => {
-  //       console.log("pause event detected");
-  //       this.suspended = true;
-  //     }); 
+    checkLowPower() { 
+       $('body').on('click touchstart', function () {
+            const videoElement = document.getElementById('home_video');
+            if (videoElement.playing) {
+                console.log("VIDEDO")
+            }
+            else {
+                // video is not playing
+                // so play video now
+                console.log("video is doing something")
+                videoElement.play()
+            }
+    });
+    },
+  },
 
-  //     videoElement.addEventListener("play", () => {
-  //       console.log("play event detected");
-  //       this.suspended = false;
-  //     });
-  //   },
-  //   destroyedEvent(){
-
-  //   }
-  // },
-
-  // created() {
-  //   this.checkLowPower();
-  // },
-  // destroyed(){
-  //   this.destroyedEvent();
+  created() {
+    this.checkLowPower();
+  },
+  destroyed(){
+    this.destroyedEvent();
   }
 }
 </script>
