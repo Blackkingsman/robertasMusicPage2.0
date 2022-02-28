@@ -1,6 +1,8 @@
 <template>
   <div class="merch">
+    v
     <v-footer class="footer">
+      <center>
        <v-col cols="2"  class="d-flex justify-end">
           <span class="hidden-sm-and-down fa-2x "  @click="redirect('https://www.instagram.com/trippieredd/?hl=en')">
             <font-awesome-icon color="purple" class="fab" :icon="['fab', 'instagram']" />
@@ -21,6 +23,7 @@
             <font-awesome-icon color="orange" :icon="['fab', 'soundcloud']" />
           </span>
         </v-col>
+        </center>
     </v-footer>
   </div>
 </template>

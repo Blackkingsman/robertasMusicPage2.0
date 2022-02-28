@@ -53,7 +53,19 @@
 </template>
 
 <script>
+import {getFirestore,collection,onSnapshot} from 'firebase/firestore'
 export default {
+  async created() {
+    //real time collection of data
+    const db = getFirestore()
+    const colRef = collection(db, "songs");
+    onSnapshot(colRef, (snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        this.songs.push({ ...doc.data(), id: doc.id });
+      });
+      // console.log(this.songs); used to check the object that came from database
+  })
+  },
   data () {
     return {
       interval: {},
@@ -61,68 +73,11 @@ export default {
       isPlaying: false,
       value: 0,
       setSong: undefined,
-      lorem: 'Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.',
-      songs: [
-        {
-          color: 'orange',
-          id: 1,
-          title: 'Missing The Rage',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1SfT9VRA1WumsQvtJTF6VOES1buGDK7Vw',
-          cover_art_url: 'https://images.complex.com/complex/images/c_fill,f_auto,g_center,w_1200/fl_lossy,pg_1/xwpfpwoavrpaagyyemz2/trippie-redd'
-        },
-        {
-          color: 'yellow',
-          title: 'Who Needs Love',
-          id: 2,
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1MyHsOj4bddkY_J6rr9vihjW_KNrMnEkG',
-          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
-        },
-        {
-          color: 'cyan',
-          id: 3,
-          title: 'I Kill People',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1YIFQanbXcup67c8TEy5pLV7Gr2fEKsld',
-          cover_art_url: 'https://i1.sndcdn.com/artworks-000355808694-j5t3p0-t500x500.jpg'
-        },
-        {
-          color: 'purple',
-          id: 4,
-          title: 'Hate Me',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1bSdDFFoKw6cHjn6IqlLURzyvT3A7cuMP',
-          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
-        },
-        {
-          color: 'red',
-          id: 5,
-          title: 'Weeeeee',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1UbR2EkOAevYGHRIMfmtxtnP4gThiJhzT',
-          cover_art_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Trippie_Redd_-_Pegasus.jpg/220px-Trippie_Redd_-_Pegasus.jpg'
-        },
-        {
-          color: 'blue',
-          id: 6,
-          title: 'Real Feel',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1cezrar-XyxDvPDkvk-kC2YsSf1V25reU',
-          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
-        },
-        {
-          color: 'green',
-          id: 7,
-          title: '6 Kiss',
-          album: '',
-          url: 'https://drive.google.com/uc?export=download&id=1RynC07xSIl58CrVa1MPrLpjFtRMi5ks9',
-          cover_art_url: 'https://m.media-amazon.com/images/I/71o-nx6xlUL._SS500_.jpg'
-        }
-      ]
+      songs: []
     }
   },
   methods: {
+    //function for playing the song and setting the value of the progress bar as it progresses
     playSong (songurl, songid) {
       // if nothing is playing at all
       if (this.isPlaying === false) {
@@ -138,12 +93,13 @@ export default {
             return (this.value = 0)
           }
           this.value += 3.33;
-          console.log(Math.ceil(this.value));
+          // console.log(Math.ceil(this.value)); used to check values 
         }, 1000)
       }
       this.isPlaying = true;
       this.setSong = songid
-      console.log(this.isPlaying, songurl);
+      
+      // console.log(this.isPlaying, songurl); used to debug
     },
     pause (songurl, songid) {
       if (this.setSong === songid) {
