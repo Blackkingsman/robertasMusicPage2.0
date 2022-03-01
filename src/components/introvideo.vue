@@ -55,9 +55,9 @@ mounted(){
   videoElement.addEventListener('suspend', () => {
         imageElement.hidden = false;
         videoElement.hidden = true;
-        this.value = true
+        document.getElementById("detect").innerHTML = "suspend detected"
     });
-
+  if(document.getElementById("detect").innerHTML.length ==0)
     document.getElementById("detect").innerHTML = this.value
     
     videoElement.addEventListener('play', () => {
