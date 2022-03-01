@@ -50,29 +50,26 @@ mounted(){
   const imageElement = document.getElementById("fallback");
  
  //detect if were on mobile device
-  if(this.onMobile) {
- // some code..
+
+// some code..
   videoElement.addEventListener('suspend', () => {
         imageElement.hidden = false;
         videoElement.hidden = true;
         this.value = true
     });
 
-    document.getElementById("detect").innerHTML = '{{this.value}}'
+    document.getElementById("detect").innerHTML = this.value
     
     videoElement.addEventListener('play', () => {
        //keep video playing
     });
-}else{
-  //keep keep video playing
-}
+
   
 },
 created(){
   //detect if were on mobile device
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // some code..
- this.onMobile = true
  this.checkLowPower()
 }
 }
