@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div v-if="suspended === false" class="video">
+  <div v-if="hidden === false" class="video">
     <video
       id="home_video"
       width="100%"
@@ -30,21 +30,18 @@ import $ from "jquery";
 export default {
   data() {
     return {
+      hidden: true,
       suspended: false,
       videoElement: document.getElementById("home_video"),
     };
   },
   methods: {
     checkLowPower() {
-      var promise = $("#home_video").play();
-
-      if (promise === 'undefined'){
-        this.suspended == true
-      }
       $("body").on("click touchstart", function () {
         const videoElement = document.getElementById("home_video");
         if (!videoElement.playing) {
           console.log("video is doing something");
+          this.hidden = false
           videoElement.play();
         }
       });
