@@ -13,9 +13,9 @@
         type="video/mp4"
       ></video>
     </div>
-    <div id="fallback" >
+    <div id="fallback" hidden>
       <v-img
-        hidden
+        
         width="100%"
         height="auto"
         src="https://i3.ytimg.com/vi/UnL8-Bwm2Yg/maxresdefault.jpg"
