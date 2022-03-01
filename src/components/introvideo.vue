@@ -58,7 +58,7 @@ mounted(){
         this.value = true
     });
 
-    document.getElementById("detect").innerHTML = '${this.value}'
+    document.getElementById("detect").innerHTML = '{{this.value}}'
     
     videoElement.addEventListener('play', () => {
        //keep video playing
