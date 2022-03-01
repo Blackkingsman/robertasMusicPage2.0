@@ -15,6 +15,7 @@
     </div>
     <div id="fallback" >
       <v-img
+        hidden
         width="100%"
         height="auto"
         src="https://i3.ytimg.com/vi/UnL8-Bwm2Yg/maxresdefault.jpg"
@@ -35,9 +36,7 @@ export default {
     checkLowPower() {
       $("body").on("click touchstart", function () {
         const videoElement = document.getElementById("home_video");
-        const imageElement = document.getElementById("fallback");
         if (!videoElement.playing) {
-          imageElement.hidden = true;
           videoElement.hidden = false;
           videoElement.play();
         }
@@ -54,11 +53,9 @@ mounted(){
         videoElement.hidden = true;
     });
     videoElement.addEventListener('play', () => {
-        imageElement.hidden = true;
         videoElement.hidden = false;
     });
 }else{
-  imageElement.hidden = true;
   videoElement.hidden = false;
 }
   
