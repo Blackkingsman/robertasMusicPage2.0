@@ -49,8 +49,14 @@ mounted(){
   const imageElement = document.getElementById("fallback");
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // some code..
-  imageElement.hidden = false;
-  videoElement.hidden = true;
+  videoElement.addEventListener('suspend', () => {
+        imageElement.hidden = false;
+        videoElement.hidden = true;
+    });
+    videoElement.addEventListener('play', () => {
+        imageElement.hidden = true;
+        videoElement.hidden = false;
+    });
 }else{
   imageElement.hidden = true;
   videoElement.hidden = false;
