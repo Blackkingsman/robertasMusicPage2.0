@@ -7,8 +7,8 @@
         height="auto"
         playsinline
         muted
-        autoplay
         loop
+        autoplay
         src="../assets/video/theWay.mp4"
         type="video/mp4"
       ></video>
@@ -39,7 +39,10 @@ export default {
     checkLowPower() {
       $("body").on("click touchstart", function () {
         const videoElement = document.getElementById("home_video");
+        // const imageElement = document.getElementById("fallback")
         if (!videoElement.playing) {
+          // videoElement.hidden = false
+          // imageElement.hidden = true
           videoElement.play();
         }
       });
@@ -47,23 +50,30 @@ export default {
   },
 mounted(){
   const videoElement = document.getElementById("home_video");
-  const imageElement = document.getElementById("fallback");
+ const imageElement = document.getElementById("fallback");
  
  //detect if were on mobile device
 
 // some code..
-  videoElement.addEventListener('suspend', () => {
+  // videoElement.addEventListener('suspend', () => {
+        // imageElement.hidden = false;
+        // videoElement.hidden = true;
+  //       document.getElementById("detect").innerHTML = "suspend detected"
+  //   });
+  
+    videoElement.addEventListener('playing', () => {
+       //keep video playing
+    document.getElementById("detect").innerHTML = this.value
+    });
+setTimeout(() => {
+  if(document.getElementById("detect").innerHTML.length ==0) {
+  document.getElementById("detect").innerHTML = "suspended"
         imageElement.hidden = false;
         videoElement.hidden = true;
-        document.getElementById("detect").innerHTML = "suspend detected"
-    });
-  if(document.getElementById("detect").innerHTML.length ==0)
-    document.getElementById("detect").innerHTML = this.value
-    
-    videoElement.addEventListener('play', () => {
-       //keep video playing
-    });
 
+}
+  
+}, 1000);
   
 },
 created(){
