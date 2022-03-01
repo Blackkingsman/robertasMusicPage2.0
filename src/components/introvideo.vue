@@ -1,7 +1,7 @@
 <template>
-  <div class="video">
+<div>
+  <div v-if="suspended === false" class="video">
     <video
-      v-if="suspended === false"
       id="home_video"
       width="100%"
       height="auto"
@@ -12,13 +12,17 @@
       src="../assets/video/theWay.mp4"
       type="video/mp4"
     ></video>
+  </div>
+  <div v-else>
     <v-img
-      v-else
       width="100%"
       height="auto"
       src="../assets/images/TrippieBackground.jpg"
     ></v-img>
+
   </div>
+</div>
+  
 </template>
 
 <script>
@@ -28,44 +32,43 @@ export default {
     return {
       suspended: false,
       videoElement: document.getElementById("home_video"),
-
     };
   },
   methods: {
-    checkLowPower() { 
-       $('body').on('click touchstart', function () {
-            const videoElement = document.getElementById('home_video');
-            if (videoElement.playing) {
-                console.log("VIDEDO")
-            }
-            else {
-                // video is not playing
-                // so play video now
-                console.log("video is doing something")
-                videoElement.play()
-            }
-    });
+    checkLowPower() {
+      var promise = $("#home_video").play();
+
+      if (promise === 'undefined'){
+        this.suspended == true
+      }
+      $("body").on("click touchstart", function () {
+        const videoElement = document.getElementById("home_video");
+        if (!videoElement.playing) {
+          console.log("video is doing something");
+          videoElement.play();
+        }
+      });
     },
   },
 
   created() {
     this.checkLowPower();
   },
-  destroyed(){
+  destroyed() {
     this.destroyedEvent();
-  }
-}
+  },
+};
 </script>
 <style>
 *::-webkit-media-controls-panel {
-  display: none!important;
+  display: none !important;
   -webkit-appearance: none;
 }
 
 /* Old shadow dom for play button */
 
 *::-webkit-media-controls-play-button {
-  display: none!important;
+  display: none !important;
   -webkit-appearance: none;
 }
 
@@ -74,7 +77,7 @@ export default {
 /* This one works! */
 
 *::-webkit-media-controls-start-playback-button {
-  display: none!important;
+  display: none !important;
   -webkit-appearance: none;
 }
 .video {
