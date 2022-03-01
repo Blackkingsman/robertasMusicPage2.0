@@ -21,6 +21,7 @@
         src="https://i3.ytimg.com/vi/UnL8-Bwm2Yg/maxresdefault.jpg"
       ></v-img>
     </div>
+    <h1 id="detect"></h1>
   </div>
 </template>
 
@@ -30,6 +31,8 @@ export default {
   data() {
     return {
       suspended: false,
+      onMobile: false,
+      value: false,
     };
   },
   methods: {
@@ -37,7 +40,6 @@ export default {
       $("body").on("click touchstart", function () {
         const videoElement = document.getElementById("home_video");
         if (!videoElement.playing) {
-          videoElement.hidden = false;
           videoElement.play();
         }
       });
@@ -46,23 +48,31 @@ export default {
 mounted(){
   const videoElement = document.getElementById("home_video");
   const imageElement = document.getElementById("fallback");
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 
+ //detect if were on mobile device
+  if(this.onMobile) {
  // some code..
   videoElement.addEventListener('suspend', () => {
         imageElement.hidden = false;
         videoElement.hidden = true;
+        this.value = true
     });
+
+    document.getElementById("detect").innerHTML = '${this.value}'
+    
     videoElement.addEventListener('play', () => {
-        videoElement.hidden = false;
+       //keep video playing
     });
 }else{
-  videoElement.hidden = false;
+  //keep keep video playing
 }
   
 },
 created(){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //detect if were on mobile device
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // some code..
+ this.onMobile = true
  this.checkLowPower()
 }
 }
