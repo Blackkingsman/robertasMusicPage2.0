@@ -67,7 +67,6 @@ export default {
           .then((response) => {
             this.instagramPost = response;
             if (this.instagramPost.data.data.length !== 0) {
-              console.log(this.instagramPost.data.data);
               this.instagramPost.data.data.forEach(async (post) => {
                 await setDoc(doc(this.db, "post", post.id), {
                   id: post.id,
@@ -80,7 +79,6 @@ export default {
                       : "",
                   timestamp: post.timestamp,
                 }).then(() => {});
-                console.log(this.instagramPost);
               });
             }
           });
@@ -104,20 +102,13 @@ export default {
       });
       this.instagramPost.sort(function (a, b) {
         if (new Date(a.timestamp) > new Date(b.timestamp)) {
-          console.log(
-            "TIME" + new Date(a.timestamp) + "<" + new Date(b.timestamp)
-          );
           return -1;
         }
         if (new Date(a.timestamp) < new Date(b.timestamp)) {
-          console.log(
-            "TIME" + new Date(a.timestamp) + ">" + new Date(b.timestamp)
-          );
           return 1;
         }
         return 0;
       });
-      console.log(this.instagramPost);
     });
   },
 };
