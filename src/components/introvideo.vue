@@ -39,10 +39,10 @@ export default {
     checkLowPower() {
       $("body").on("click touchstart", function () {
         const videoElement = document.getElementById("home_video");
-        // const imageElement = document.getElementById("fallback")
+        const imageElement = document.getElementById("fallback")
         if (!videoElement.playing) {
-          // videoElement.hidden = false
-          // imageElement.hidden = true
+         videoElement.hidden = false
+           imageElement.hidden = true
           videoElement.play();
         }
       });
@@ -73,7 +73,7 @@ setTimeout(() => {
 
 }
   
-}, 1000);
+}, 1500);
   
 },
 created(){
