@@ -1,11 +1,12 @@
 <template>
 <div>
-  <div v-if="hidden === false" class="video">
+  <div class="video">
     <video
       id="home_video"
       width="100%"
       height="auto"
       playsinline
+      hidden 
       muted
       autoplay
       loop
@@ -13,11 +14,11 @@
       type="video/mp4"
     ></video>
   </div>
-  <div v-else>
+  <div id="fallback" >
     <v-img
       width="100%"
       height="auto"
-      src="../assets/images/TrippieBackground.jpg"
+      src="https://i3.ytimg.com/vi/UnL8-Bwm2Yg/maxresdefault.jpg"
     ></v-img>
 
   </div>
@@ -32,17 +33,19 @@ export default {
     return {
       hidden: true,
       suspended: false,
-      videoElement: document.getElementById("home_video"),
     };
   },
   methods: {
     checkLowPower() {
+      
       $("body").on("click touchstart", function () {
-        const videoElement = document.getElementById("home_video");
+        const videoElement = document.getElementById("home_video")
+        const imageElement = document.getElementById("fallback")
         if (!videoElement.playing) {
-          console.log("video is doing something");
-          this.hidden = false
+        imageElement.hidden = true
+         videoElement.hidden = false
           videoElement.play();
+        
         }
       });
     },
