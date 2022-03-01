@@ -45,12 +45,13 @@ export default {
     },
   },
 mounted(){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- // some code..
-
-}else{
   const videoElement = document.getElementById("home_video");
   const imageElement = document.getElementById("fallback");
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // some code..
+  imageElement.hidden = false;
+  videoElement.hidden = true;
+}else{
   imageElement.hidden = true;
   videoElement.hidden = false;
 }
