@@ -8,7 +8,6 @@
         playsinline
         muted
         loop
-        autoplay
         src="../assets/video/theWay.mp4"
         type="video/mp4"
       ></video>
@@ -66,7 +65,7 @@ mounted(){
     document.getElementById("detect").innerHTML = this.value
     });
 setTimeout(() => {
-  if(document.getElementById("detect").innerHTML.length ==0) {
+  if(document.getElementById("detect").innerHTML.length ==! 'false') {
   document.getElementById("detect").innerHTML = "suspended"
         imageElement.hidden = false;
         videoElement.hidden = true;
